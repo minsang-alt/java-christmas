@@ -19,5 +19,8 @@ public class Order {
         return orderItems.getTotalOrderPrice();
     }
 
+    public int getFoodCount(FoodGroup foodGroup) {
+        return orderItems.getFoodCount(foodGroup);
+    }
 
 }

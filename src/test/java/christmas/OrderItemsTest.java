@@ -57,4 +57,13 @@ class OrderItemsTest {
         assertThat(orderItems.getTotalOrderPrice())
                 .isEqualTo(totalPrice);
     }
+
+    @DisplayName("foodGroup에 대한 음식만을 개수를 세어 반환")
+    @Test
+    void count_foodByFoodGroup() {
+        OrderItems orderItems = new OrderItems("양송이수프-2,타파스-1,초코케이크-2,아이스크림-1");
+        assertThat(orderItems.getFoodCount(FoodGroup.DESSERT))
+                .isEqualTo(3);
+    }
+
 }

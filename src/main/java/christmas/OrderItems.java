@@ -2,6 +2,7 @@ package christmas;
 
 import java.util.EnumMap;
 import java.util.List;
+import java.util.Map.Entry;
 
 public class OrderItems {
     private final int MAX_ORDER_NUM = 20;
@@ -12,6 +13,13 @@ public class OrderItems {
         generateOrderStringToMap(orderString);
         validateTotalMenuNum();
         validateIncludeOnlyDrink();
+    }
+
+    public int getFoodCount(FoodGroup foodGroup) {
+        return items.entrySet().stream()
+                .filter(food -> foodGroup.hasFood(food.getKey()))
+                .mapToInt(Entry::getValue)
+                .sum();
     }
 
     public int getTotalOrderPrice() {
@@ -69,4 +77,5 @@ public class OrderItems {
             throw new IllegalArgumentException("[ERROR] 메뉴는 한 번에 최대 20개까지만 주문할 수 있습니다.");
         }
     }
+
 }
