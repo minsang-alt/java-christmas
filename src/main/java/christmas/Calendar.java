@@ -34,6 +34,11 @@ public class Calendar {
         return WEEKEND.contains(CALENDAR.get(date));
     }
 
+    public static boolean isWeek(Week week, int date) {
+        Week realWeek = CALENDAR.get(date);
+        return week == realWeek;
+    }
+
     private static void validateDate(int date) {
         if (START_DAY > date || LAST_DAY < date) {
             throw new IllegalArgumentException("[ERROR] 잘못된 date를 입력했습니다.");

@@ -39,5 +39,15 @@ class CalendarTest {
                 .hasMessage("[ERROR] 잘못된 date를 입력했습니다.");
     }
 
+    @ParameterizedTest
+    @ValueSource(ints = {3, 10, 17, 24, 31})
+    @DisplayName("해당 date가 일요일이면 true반환")
+    void return_true_when_date_sun(int date) {
+        assertThat(Calendar.isWeek(Week.SUN, date))
+                .isTrue();
+        assertThat(Calendar.isWeek(Week.MON, date))
+                .isFalse();
+    }
+
 
 }
