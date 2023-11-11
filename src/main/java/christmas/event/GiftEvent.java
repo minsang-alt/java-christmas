@@ -11,6 +11,11 @@ public class GiftEvent implements Event {
     private static final int MIN_ORDER_MONEY = 120_000;
 
     @Override
+    public String getName() {
+        return "증정 이벤트";
+    }
+
+    @Override
     public int calculateDiscount(Order order) {
 
         if (!isApplicable(order.getOrderDate())) {

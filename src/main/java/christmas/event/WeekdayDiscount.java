@@ -9,6 +9,11 @@ public class WeekdayDiscount implements Event {
     private static final int DISCOUNT = 2023;
 
     @Override
+    public String getName() {
+        return "평일 할인";
+    }
+
+    @Override
     public int calculateDiscount(Order order) {
         if (!isApplicable(order.getOrderDate())) {
             return 0;

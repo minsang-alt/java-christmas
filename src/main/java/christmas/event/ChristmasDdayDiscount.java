@@ -10,6 +10,11 @@ public class ChristmasDdayDiscount implements Event {
     private static final int END_DATE = 25;
 
     @Override
+    public String getName() {
+        return "크리스마스 디데이 할인";
+    }
+
+    @Override
     public int calculateDiscount(Order order) {
         int orderDate = order.getOrderDate();
         if (!isApplicable(orderDate)) {
