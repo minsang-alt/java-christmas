@@ -1,4 +1,4 @@
-package christmas;
+package christmas.calendar;
 
 import java.util.EnumSet;
 import java.util.HashMap;

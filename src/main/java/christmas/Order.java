@@ -12,7 +12,7 @@ public class Order {
     }
 
     public int getOrderDate() {
-        return orderDate.getDATE();
+        return orderDate.getDate();
     }
 
     public int getTotalPrice() {
@@ -22,5 +22,5 @@ public class Order {
     public int getFoodCount(FoodGroup foodGroup) {
         return orderItems.getFoodCountByFoodGroup(foodGroup);
     }
-    
+
 }

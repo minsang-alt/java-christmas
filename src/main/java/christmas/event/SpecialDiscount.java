@@ -1,8 +1,8 @@
 package christmas.event;
 
-import christmas.Calendar;
 import christmas.Order;
-import christmas.Week;
+import christmas.calendar.Calendar;
+import christmas.calendar.Week;
 
 public class SpecialDiscount implements Event {
 

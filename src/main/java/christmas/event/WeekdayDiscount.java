@@ -1,8 +1,8 @@
 package christmas.event;
 
-import christmas.Calendar;
 import christmas.FoodGroup;
 import christmas.Order;
+import christmas.calendar.Calendar;
 
 public class WeekdayDiscount implements Event {
 

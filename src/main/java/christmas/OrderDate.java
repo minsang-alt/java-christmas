@@ -11,11 +11,11 @@ public class OrderDate {
         this.DATE = date;
     }
 
-    public int getMONTH() {
+    public int getMonth() {
         return MONTH;
     }
 
-    public int getDATE() {
+    public int getDate() {
         return DATE;
     }
 
