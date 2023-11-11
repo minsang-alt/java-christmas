@@ -157,3 +157,10 @@
 - [ ] 주문이 들어오면 이벤트들을 하나씩 적용시켜본다.
 - [ ] 해택이름(key)- 할인된가격(value)로 만들고 map으로 관리하고 반환한다.
 
+### 예외처리(custom Exception)
+
+- InvalidFoodNameException : 등록된 음식이름인지 유효성 검사
+- DuplicatedMenuException : 중복된 메뉴를 등록했는 지 유효성 검사
+- InvalidQuantityException : 주문 개수의 유효성 검사
+- OrderLimitViolationException : 주문 가능한 메뉴의 총 개수를 검사
+- OnlyDrinkOrderException : 음료만 주문되었는지를 검사 
