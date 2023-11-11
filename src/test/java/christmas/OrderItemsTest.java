@@ -67,8 +67,17 @@ class OrderItemsTest {
     @Test
     void count_foodByFoodGroup() {
         OrderItems orderItems = new OrderItems("양송이수프-2,타파스-1,초코케이크-2,아이스크림-1");
-        assertThat(orderItems.getFoodCount(FoodGroup.DESSERT))
+        assertThat(orderItems.getFoodCountByFoodGroup(FoodGroup.DESSERT))
                 .isEqualTo(3);
     }
 
+    @DisplayName("구매이력 출력")
+    @Test
+    void orderItems_recipe() {
+        OrderItems orderItems = new OrderItems("양송이수프-2,타파스-1,초코케이크-2,아이스크림-1");
+        String recipe = "양송이수프 2개\n" + "타파스 1개\n" + "초코케이크 2개\n" + "아이스크림 1개";
+
+        assertThat(orderItems.mapToString())
+                .isEqualTo(recipe);
+    }
 }

@@ -9,7 +9,7 @@ public class WeekdayDiscount implements Event {
     private static final int DISCOUNT = 2023;
 
     @Override
-    public String getName() {
+    public String getEventName() {
         return "평일 할인";
     }
 

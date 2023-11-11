@@ -10,7 +10,7 @@ public class ChristmasDdayDiscount implements Event {
     private static final int END_DATE = 25;
 
     @Override
-    public String getName() {
+    public String getEventName() {
         return "크리스마스 디데이 할인";
     }
 

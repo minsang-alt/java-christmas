@@ -4,7 +4,7 @@ import christmas.Order;
 
 public interface Event {
 
-    String getName();
+    String getEventName();
 
     int calculateDiscount(Order order);
 

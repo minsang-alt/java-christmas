@@ -8,6 +8,7 @@ import christmas.exception.OrderLimitViolationException;
 import java.util.EnumMap;
 import java.util.List;
 import java.util.Map.Entry;
+import java.util.stream.Collectors;
 
 public class OrderItems {
     private final int MAX_ORDER_NUM = 20;
@@ -20,7 +21,7 @@ public class OrderItems {
         validateIncludeOnlyDrink();
     }
 
-    public int getFoodCount(FoodGroup foodGroup) {
+    public int getFoodCountByFoodGroup(FoodGroup foodGroup) {
         return items.entrySet().stream()
                 .filter(food -> foodGroup.hasFood(food.getKey()))
                 .mapToInt(Entry::getValue)
@@ -83,4 +84,9 @@ public class OrderItems {
         }
     }
 
+    public String mapToString() {
+        return items.entrySet().stream()
+                .map(food -> food.getKey().getTitle() + " " + food.getValue() + "개")
+                .collect(Collectors.joining("\n"));
+    }
 }

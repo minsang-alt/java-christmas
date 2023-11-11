@@ -20,7 +20,7 @@ public class Order {
     }
 
     public int getFoodCount(FoodGroup foodGroup) {
-        return orderItems.getFoodCount(foodGroup);
+        return orderItems.getFoodCountByFoodGroup(foodGroup);
     }
-
+    
 }
