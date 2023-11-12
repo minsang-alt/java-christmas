@@ -1,5 +1,6 @@
 package christmas;
 
+import christmas.dto.EventApplyResponse;
 import christmas.event.ChristmasDdayDiscount;
 import christmas.event.Event;
 import christmas.event.GiftEvent;
@@ -33,7 +34,7 @@ class EventManagerTest {
         List<EventApplyResponse> eventApplyResponses = eventManager.applyDiscount(order);
 
         int i = eventApplyResponses.stream()
-                .filter(dto -> dto.getEventName().equals(eventName))
+                .filter(dto -> dto.getEventName().getName().equals(eventName))
                 .findFirst()
                 .map(EventApplyResponse::getDiscountPrice)
                 .orElse(0);

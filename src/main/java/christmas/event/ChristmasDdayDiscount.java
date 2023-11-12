@@ -1,5 +1,7 @@
 package christmas.event;
 
+
+import christmas.EventName;
 import christmas.Order;
 
 public class ChristmasDdayDiscount implements Event {
@@ -10,8 +12,8 @@ public class ChristmasDdayDiscount implements Event {
     private static final int END_DATE = 25;
 
     @Override
-    public String getEventName() {
-        return "크리스마스 디데이 할인";
+    public EventName getEventName() {
+        return EventName.CHRISTMAS_DDAY_DISCOUNT;
     }
 
     @Override

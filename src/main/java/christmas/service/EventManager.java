@@ -1,7 +1,7 @@
 package christmas.service;
 
-import christmas.EventApplyResponse;
 import christmas.Order;
+import christmas.dto.EventApplyResponse;
 import christmas.event.Event;
 import java.util.ArrayList;
 import java.util.Collections;

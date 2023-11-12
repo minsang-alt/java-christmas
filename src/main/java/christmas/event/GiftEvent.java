@@ -1,5 +1,6 @@
 package christmas.event;
 
+import christmas.EventName;
 import christmas.Food;
 import christmas.Order;
 
@@ -16,8 +17,8 @@ public class GiftEvent implements Event {
     }
 
     @Override
-    public String getEventName() {
-        return "증정 이벤트";
+    public EventName getEventName() {
+        return EventName.GIFT_EVENT;
     }
 
     @Override

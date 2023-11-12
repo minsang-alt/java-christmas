@@ -1,5 +1,6 @@
 package christmas.event;
 
+import christmas.EventName;
 import christmas.FoodGroup;
 import christmas.Order;
 import christmas.calendar.Calendar;
@@ -9,8 +10,8 @@ public class WeekdayDiscount implements Event {
     private static final int DISCOUNT = 2023;
 
     @Override
-    public String getEventName() {
-        return "평일 할인";
+    public EventName getEventName() {
+        return EventName.WEEKDAY_DISCOUNT;
     }
 
     @Override

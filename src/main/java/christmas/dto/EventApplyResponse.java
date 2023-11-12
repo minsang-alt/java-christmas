@@ -1,15 +1,17 @@
-package christmas;
+package christmas.dto;
+
+import christmas.EventName;
 
 public class EventApplyResponse {
-    private String eventName;
+    private EventName eventName;
     private int discountPrice;
 
-    public EventApplyResponse(String eventName, int discountPrice) {
+    public EventApplyResponse(EventName eventName, int discountPrice) {
         this.eventName = eventName;
         this.discountPrice = discountPrice;
     }
 
-    public String getEventName() {
+    public EventName getEventName() {
         return eventName;
     }
 

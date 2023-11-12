@@ -1,10 +1,11 @@
 package christmas.event;
 
+import christmas.EventName;
 import christmas.Order;
 
 public interface Event {
 
-    String getEventName();
+    EventName getEventName();
 
     int calculateDiscount(Order order);
 
