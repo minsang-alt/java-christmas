@@ -28,9 +28,9 @@ class EventManagerTest {
 
         Order order = new Order(3, "티본스테이크-1,바비큐립-1,초코케이크-2,제로콜라-1");
 
-        EventManager eventManager = new EventManager(events, order);
+        EventManager eventManager = new EventManager(events);
 
-        List<EventApplyResponse> eventApplyResponses = eventManager.applyDiscount();
+        List<EventApplyResponse> eventApplyResponses = eventManager.applyDiscount(order);
 
         int i = eventApplyResponses.stream()
                 .filter(dto -> dto.getEventName().equals(eventName))

@@ -10,18 +10,16 @@ import java.util.List;
 public class EventManager {
 
     private final List<Event> events;
-    private final Order order;
 
     private final int MIN_EVENT_PARTICIPATE = 10_000;
 
-    public EventManager(List<Event> events, Order order) {
+    public EventManager(List<Event> events) {
         this.events = events;
-        this.order = order;
     }
 
-    public List<EventApplyResponse> applyDiscount() {
+    public List<EventApplyResponse> applyDiscount(Order order) {
         List<EventApplyResponse> discountDetails = new ArrayList<>();
-        if (!isEventApply()) {
+        if (!isEventApply(order)) {
             return List.of();
         }
         for (Event event : events) {
@@ -31,7 +29,7 @@ public class EventManager {
         return Collections.unmodifiableList(discountDetails);
     }
 
-    private boolean isEventApply() {
+    private boolean isEventApply(Order order) {
         return order.getTotalPrice() >= MIN_EVENT_PARTICIPATE;
     }
 
