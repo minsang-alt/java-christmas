@@ -7,6 +7,7 @@ import christmas.dto.BenefitDetail;
 import christmas.dto.EventApplyResponse;
 import christmas.dto.EventResultDto;
 import christmas.event.Event;
+import christmas.event.GiftEvent;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -19,21 +20,27 @@ public class EventService {
 
     public EventResultDto applyEvents(Order order) {
         List<EventApplyResponse> eventApplyResponses = eventManager.applyDiscount(order);
-        boolean hasGift = isGiftEventApplied(eventApplyResponses);
+
+        String gift = isGiftEventApplied(eventApplyResponses);
         List<BenefitDetail> benefitDetails = createBenefitDetails(eventApplyResponses);
         int totalBenefitsAmount = getTotalBenefitsAmount(eventApplyResponses);
         int salesPriceAfterDiscount = salesPriceAfterDiscount(eventApplyResponses, order);
         EventBadge eventBadge = getEventBadge(eventApplyResponses);
 
-        return new EventResultDto(benefitDetails, hasGift, totalBenefitsAmount, salesPriceAfterDiscount, eventBadge);
+        return new EventResultDto(benefitDetails, gift, totalBenefitsAmount, salesPriceAfterDiscount, eventBadge);
     }
 
-    public boolean isGiftEventApplied(List<EventApplyResponse> eventApplyResponses) {
-        return eventApplyResponses.stream()
+    public String isGiftEventApplied(List<EventApplyResponse> eventApplyResponses) {
+        boolean isGiftEventApplied = eventApplyResponses.stream()
                 .filter(response -> response.getEventName() == EventName.GIFT_EVENT)
                 .findFirst()
                 .map(response -> response.getDiscountPrice() != 0)
                 .orElse(false);
+
+        if (isGiftEventApplied) {
+            return GiftEvent.getGiftName();
+        }
+        return "없음";
     }
 
     public List<BenefitDetail> createBenefitDetails(List<EventApplyResponse> eventApplyResponses) {

@@ -23,4 +23,7 @@ public class Order {
         return orderItems.getFoodCountByFoodGroup(foodGroup);
     }
 
+    public OrderItems getOrderItems() {
+        return orderItems;
+    }
 }

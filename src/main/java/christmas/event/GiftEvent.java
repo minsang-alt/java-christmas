@@ -12,8 +12,8 @@ public class GiftEvent implements Event {
     private static final Food GIFT_NAME = Food.CHAMPAGNE;
     private static final int MIN_ORDER_MONEY = 120_000;
 
-    public String getGiftName() {
-        return GIFT_NAME.name();
+    public static String getGiftName() {
+        return GIFT_NAME.getTitle() + " " + "1개";
     }
 
     @Override

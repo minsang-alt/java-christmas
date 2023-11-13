@@ -30,7 +30,7 @@ class EventServiceTest {
                 new EventApplyResponse(EventName.GIFT_EVENT, 25000));
 
         assertThat(eventService.isGiftEventApplied(eventApplyResponses))
-                .isTrue();
+                .isEqualTo(GiftEvent.getGiftName());
     }
 
     @DisplayName("증정이벤트에 적용되지 않다면 false")
@@ -44,7 +44,7 @@ class EventServiceTest {
                 new EventApplyResponse(EventName.GIFT_EVENT, 0));
 
         assertThat(eventService.isGiftEventApplied(eventApplyResponses))
-                .isFalse();
+                .isEqualTo("없음");
     }
 
     @DisplayName("이벤트가 적용되지 않다면 false")
@@ -57,7 +57,7 @@ class EventServiceTest {
         List<EventApplyResponse> eventApplyResponses = List.of();
 
         assertThat(eventService.isGiftEventApplied(eventApplyResponses))
-                .isFalse();
+                .isEqualTo("없음");
     }
 
     @DisplayName("정상적으로 해택내역을 가져오는 지 확인")

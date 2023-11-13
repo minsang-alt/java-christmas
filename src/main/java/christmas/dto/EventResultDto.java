@@ -5,15 +5,15 @@ import java.util.List;
 
 public class EventResultDto {
     private final List<BenefitDetail> benefitDetails;
-    private final boolean hasGift;
+    private final String gift;
     private final int totalBenefitsAmount;
     private final int salesPriceAfterDiscount;
     private final EventBadge eventBadge;
 
-    public EventResultDto(List<BenefitDetail> benefitDetails, boolean hasGift, int totalBenefitsAmount,
+    public EventResultDto(List<BenefitDetail> benefitDetails, String gift, int totalBenefitsAmount,
                           int salesPriceAfterDiscount, EventBadge eventBadge) {
         this.benefitDetails = benefitDetails;
-        this.hasGift = hasGift;
+        this.gift = gift;
         this.totalBenefitsAmount = totalBenefitsAmount;
         this.salesPriceAfterDiscount = salesPriceAfterDiscount;
         this.eventBadge = eventBadge;
@@ -23,8 +23,8 @@ public class EventResultDto {
         return benefitDetails;
     }
 
-    public boolean isHasGift() {
-        return hasGift;
+    public String getGift() {
+        return gift;
     }
 
     public int getTotalBenefitsAmount() {
