@@ -148,7 +148,6 @@
 
 ### 주문(Order ver2)
 
-- [ ] 할인 후 예상 결제금액을 반환한다
 - [x] OrderItems에서 주문 이력 String 생성
 
 ### 이벤트관리Manager
@@ -177,4 +176,9 @@
 - DuplicatedMenuException : 중복된 메뉴를 등록했는 지 유효성 검사
 - InvalidQuantityException : 주문 개수의 유효성 검사
 - OrderLimitViolationException : 주문 가능한 메뉴의 총 개수를 검사
-- OnlyDrinkOrderException : 음료만 주문되었는지를 검사 
+- OnlyDrinkOrderException : 음료만 주문되었는지를 검사
+
+### 유효성 검사
+
+- [x] 숫자(양수)만 가능 (0부터 모든 정수)
+- [x] 메뉴 입력 형식에 맞는 지 체크

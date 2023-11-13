@@ -8,13 +8,15 @@ import christmas.event.WeekdayDiscount;
 import christmas.event.WeekendDiscount;
 import christmas.service.ChristmasService;
 import christmas.service.EventService;
+import christmas.view.InputValidator;
 import christmas.view.InputView;
 import christmas.view.OutputView;
 import java.util.List;
 
 public class Application {
     public static void main(String[] args) {
-        InputView inputView = new InputView();
+        InputValidator inputValidator = new InputValidator();
+        InputView inputView = new InputView(inputValidator);
         OutputView outputView = new OutputView();
         List<Event> events = List.of(new ChristmasDdayDiscount(), new WeekdayDiscount(), new WeekendDiscount(),
                 new SpecialDiscount(), new GiftEvent());
