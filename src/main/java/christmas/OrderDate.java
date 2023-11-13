@@ -11,9 +11,6 @@ public class OrderDate {
         this.DATE = date;
     }
 
-    public int getMonth() {
-        return MONTH;
-    }
 
     public int getDate() {
         return DATE;
