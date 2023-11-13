@@ -13,20 +13,20 @@ public class InputValidator {
     public void validateNum(String input) {
         Matcher matcher = ONLY_NUM.matcher(input);
         if (!matcher.matches()) {
-            throw new IllegalArgumentException("[ERROR] 숫자로만 입력해주세요");
+            throw new IllegalArgumentException("[ERROR] 유효하지 않은 날짜입니다. 다시 입력해 주세요.");
         }
     }
 
     public void validateNull(String amount) {
         if (amount == null || amount.isBlank()) {
-            throw new IllegalArgumentException("[ERROR] 빈 값을 입력할 수 없습니다.");
+            throw new IllegalArgumentException("[ERROR] 유효하지 않은 날짜입니다. 다시 입력해 주세요.");
         }
     }
 
     public void validateFormat(String input) {
         Matcher matcher = FORMAT_MENU.matcher(input);
         if (!matcher.matches()) {
-            throw new IllegalArgumentException("[ERROR] 제공된 형식대로 입력하세요");
+            throw new IllegalArgumentException("[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요.");
         }
     }
 

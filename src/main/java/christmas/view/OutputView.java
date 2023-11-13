@@ -69,4 +69,8 @@ public class OutputView {
     private String changeFormat(int amount) {
         return String.valueOf(amount).replaceAll(STAMP_EVERY_THOUSANDS_COMMA, ",");
     }
+
+    public void printExceptionMessage(String message) {
+        System.out.println(message);
+    }
 }

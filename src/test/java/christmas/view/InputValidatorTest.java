@@ -17,7 +17,7 @@ class InputValidatorTest {
     void throwExceptionWhenInputIsNotNumber(String value) {
         assertThatThrownBy(() -> inputValidator.validateNum(value))
                 .isInstanceOf(IllegalArgumentException.class)
-                .hasMessage("[ERROR] 숫자로만 입력해주세요");
+                .hasMessage("[ERROR] 유효하지 않은 날짜입니다. 다시 입력해 주세요.");
     }
 
     @ParameterizedTest
@@ -26,7 +26,7 @@ class InputValidatorTest {
     void throw_IllegalException_when_input_isNullOrBlank(String value) {
         assertThatThrownBy(() -> inputValidator.validateNull(value))
                 .isInstanceOf(IllegalArgumentException.class)
-                .hasMessage("[ERROR] 빈 값을 입력할 수 없습니다.");
+                .hasMessage("[ERROR] 유효하지 않은 날짜입니다. 다시 입력해 주세요.");
     }
 
     @ParameterizedTest
@@ -44,7 +44,7 @@ class InputValidatorTest {
     void throw_when_wrong_format(String value) {
         assertThatThrownBy(() -> inputValidator.validateFormat(value))
                 .isInstanceOf(IllegalArgumentException.class)
-                .hasMessage("[ERROR] 제공된 형식대로 입력하세요");
+                .hasMessage("[ERROR] 유효하지 않은 주문입니다. 다시 입력해 주세요.");
 
     }
 
