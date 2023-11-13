@@ -167,6 +167,10 @@
 - [x] 증정메뉴가 있으면 그걸 제외한 할인 금액을 반환
 - [x] 이벤트 배지 반환
 
+### 크리스마스 서비스
+
+- [x] Order생성 및 해당 OrderDto 변환
+
 ### 예외처리(custom Exception)
 
 - InvalidFoodNameException : 등록된 음식이름인지 유효성 검사
