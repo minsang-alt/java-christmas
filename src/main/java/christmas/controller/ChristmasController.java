@@ -39,10 +39,12 @@ public class ChristmasController {
     }
 
     private OrderDto receiveOrder() {
+        
+        int date = readDate();
+
         while (true) {
             try {
-                int date = inputView.readDate();
-                String inputMenuWithCount = inputView.inputMenuWithCount();
+                String inputMenuWithCount = readMenu();
                 OrderDto orderDto = christmasService.createOrderAndApplyEvent(date, inputMenuWithCount);
 
                 return orderDto;
@@ -51,4 +53,19 @@ public class ChristmasController {
             }
         }
     }
+
+    private int readDate() {
+        while (true) {
+            try {
+                return inputView.readDate();
+            } catch (IllegalArgumentException e) {
+                outputView.printExceptionMessage(e.getMessage());
+            }
+        }
+    }
+
+    private String readMenu() {
+        return inputView.inputMenuWithCount();
+    }
+
 }
