@@ -18,7 +18,7 @@ public class Calendar {
 
     static {
         Week[] weeks = Week.values();
-        //1일 = 금요일 부터 시작
+        // 12월 1일은 금요일 부터 시작
         for (int i = START_DAY; i <= LAST_DAY; i++) {
             CALENDAR.put(i, weeks[(i + 3) % weeks.length]);
         }

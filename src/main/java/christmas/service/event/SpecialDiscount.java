@@ -7,7 +7,6 @@ import christmas.model.order.Order;
 
 public class SpecialDiscount implements Event {
 
-
     private static final int DISCOUNT = 1000;
 
     @Override
@@ -20,6 +19,7 @@ public class SpecialDiscount implements Event {
         if (!isApplicable(order.getOrderDate())) {
             return 0;
         }
+
         return DISCOUNT;
     }
 

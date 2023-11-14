@@ -44,6 +44,7 @@ public class ChristmasController {
                 int date = inputView.readDate();
                 String inputMenuWithCount = inputView.inputMenuWithCount();
                 OrderDto orderDto = christmasService.createOrderAndApplyEvent(date, inputMenuWithCount);
+
                 return orderDto;
             } catch (IllegalArgumentException e) {
                 outputView.printExceptionMessage(e.getMessage());

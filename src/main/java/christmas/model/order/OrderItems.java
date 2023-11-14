@@ -13,8 +13,13 @@ import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
 public class OrderItems {
-    private final int MAX_ORDER_NUM = 20;
+
+    private final int MAX_TOTAL_ORDER_NUM = 20;
+
+    private final int MIN_TOTAL_ORDER_NUM = 1;
+
     private final int MIN_ORDER_NUM = 1;
+
     private final EnumMap<Food, Integer> items = new EnumMap<>(Food.class);
 
     public OrderItems(String orderString) {
@@ -74,7 +79,7 @@ public class OrderItems {
     }
 
     private void validateMenuNum(int quantity) {
-        if (quantity <= 0) {
+        if (quantity < MIN_ORDER_NUM) {
             throw new InvalidQuantityException();
         }
     }
@@ -83,7 +88,7 @@ public class OrderItems {
         long total = items.values().stream()
                 .mapToInt(Integer::intValue)
                 .sum();
-        if (total > MAX_ORDER_NUM || total < MIN_ORDER_NUM) {
+        if (total > MAX_TOTAL_ORDER_NUM || total < MIN_TOTAL_ORDER_NUM) {
             throw new OrderLimitViolationException();
         }
     }

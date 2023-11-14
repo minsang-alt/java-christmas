@@ -23,8 +23,6 @@ public class OutputView {
 
     public void printTotalOrderAmount(int amount) {
         System.out.println("\n<할인 전 총주문 금액>");
-        // 3만큼 끊어서 출력하기
-
         System.out.println(changeFormat(amount) + "원");
     }
 

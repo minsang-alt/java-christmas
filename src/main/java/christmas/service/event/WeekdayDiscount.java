@@ -19,6 +19,7 @@ public class WeekdayDiscount implements Event {
         if (!isApplicable(order.getOrderDate())) {
             return 0;
         }
+
         return order.getFoodCount(FoodGroup.DESSERT) * DISCOUNT;
     }
 
