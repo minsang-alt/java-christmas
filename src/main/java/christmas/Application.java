@@ -1,30 +1,13 @@
 package christmas;
 
-import christmas.event.ChristmasDdayDiscount;
-import christmas.event.Event;
-import christmas.event.GiftEvent;
-import christmas.event.SpecialDiscount;
-import christmas.event.WeekdayDiscount;
-import christmas.event.WeekendDiscount;
-import christmas.service.ChristmasService;
-import christmas.service.EventService;
-import christmas.view.InputValidator;
-import christmas.view.InputView;
-import christmas.view.OutputView;
-import java.util.List;
+import christmas.configuration.AppConfig;
+import christmas.controller.ChristmasController;
 
 public class Application {
     public static void main(String[] args) {
-        InputValidator inputValidator = new InputValidator();
-        InputView inputView = new InputView(inputValidator);
-        OutputView outputView = new OutputView();
-        List<Event> events = List.of(new ChristmasDdayDiscount(), new WeekdayDiscount(), new WeekendDiscount(),
-                new SpecialDiscount(), new GiftEvent());
-        EventService eventService = new EventService(events);
-        ChristmasService christmasService = new ChristmasService(eventService);
+        AppConfig appConfig = new AppConfig();
+        ChristmasController controller = appConfig.christmasController();
 
-        ChristmasController controller = new ChristmasController(inputView, outputView, christmasService);
         controller.run();
-
     }
 }
