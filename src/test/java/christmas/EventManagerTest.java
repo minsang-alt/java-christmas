@@ -1,13 +1,14 @@
 package christmas;
 
 import christmas.dto.EventApplyResponse;
-import christmas.event.ChristmasDdayDiscount;
-import christmas.event.Event;
-import christmas.event.GiftEvent;
-import christmas.event.SpecialDiscount;
-import christmas.event.WeekdayDiscount;
-import christmas.event.WeekendDiscount;
+import christmas.model.order.Order;
 import christmas.service.EventManager;
+import christmas.service.event.ChristmasDdayDiscount;
+import christmas.service.event.Event;
+import christmas.service.event.GiftEvent;
+import christmas.service.event.SpecialDiscount;
+import christmas.service.event.WeekdayDiscount;
+import christmas.service.event.WeekendDiscount;
 import java.util.List;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;

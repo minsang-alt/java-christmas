@@ -1,9 +1,9 @@
-package christmas.event;
+package christmas.service.event;
 
-import christmas.EventName;
-import christmas.FoodGroup;
-import christmas.Order;
-import christmas.calendar.Calendar;
+import christmas.model.calendar.Calendar;
+import christmas.model.event.EventName;
+import christmas.model.food.FoodGroup;
+import christmas.model.order.Order;
 
 public class WeekdayDiscount implements Event {
 

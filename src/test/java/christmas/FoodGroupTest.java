@@ -2,6 +2,8 @@ package christmas;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import christmas.model.food.Food;
+import christmas.model.food.FoodGroup;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

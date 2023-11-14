@@ -1,9 +1,9 @@
 package christmas.service;
 
-import christmas.Order;
-import christmas.OrderItems;
 import christmas.dto.EventResultDto;
 import christmas.dto.OrderDto;
+import christmas.model.order.Order;
+import christmas.model.order.OrderItems;
 
 public class ChristmasService {
 

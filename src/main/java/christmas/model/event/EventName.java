@@ -1,4 +1,4 @@
-package christmas;
+package christmas.model.event;
 
 public enum EventName {
     CHRISTMAS_DDAY_DISCOUNT("크리스마스 디데이 할인"),

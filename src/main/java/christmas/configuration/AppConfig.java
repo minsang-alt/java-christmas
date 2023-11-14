@@ -1,14 +1,14 @@
 package christmas.configuration;
 
 import christmas.controller.ChristmasController;
-import christmas.event.ChristmasDdayDiscount;
-import christmas.event.Event;
-import christmas.event.GiftEvent;
-import christmas.event.SpecialDiscount;
-import christmas.event.WeekdayDiscount;
-import christmas.event.WeekendDiscount;
 import christmas.service.ChristmasService;
 import christmas.service.EventService;
+import christmas.service.event.ChristmasDdayDiscount;
+import christmas.service.event.Event;
+import christmas.service.event.GiftEvent;
+import christmas.service.event.SpecialDiscount;
+import christmas.service.event.WeekdayDiscount;
+import christmas.service.event.WeekendDiscount;
 import christmas.view.InputValidator;
 import christmas.view.InputView;
 import christmas.view.OutputView;

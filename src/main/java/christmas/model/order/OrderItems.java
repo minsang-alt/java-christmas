@@ -1,10 +1,12 @@
-package christmas;
+package christmas.model.order;
 
 import christmas.exception.DuplicatedMenuException;
 import christmas.exception.InvalidFoodNameException;
 import christmas.exception.InvalidQuantityException;
 import christmas.exception.OnlyDrinkOrderException;
 import christmas.exception.OrderLimitViolationException;
+import christmas.model.food.Food;
+import christmas.model.food.FoodGroup;
 import java.util.EnumMap;
 import java.util.List;
 import java.util.Map.Entry;
@@ -13,7 +15,7 @@ import java.util.stream.Collectors;
 public class OrderItems {
     private final int MAX_ORDER_NUM = 20;
     private final int MIN_ORDER_NUM = 1;
-    private EnumMap<Food, Integer> items = new EnumMap<>(Food.class);
+    private final EnumMap<Food, Integer> items = new EnumMap<>(Food.class);
 
     public OrderItems(String orderString) {
         generateOrderStringToMap(orderString);
@@ -78,7 +80,9 @@ public class OrderItems {
     }
 
     private void validateTotalMenuNum() {
-        long total = items.values().stream().mapToInt(Integer::intValue).sum();
+        long total = items.values().stream()
+                .mapToInt(Integer::intValue)
+                .sum();
         if (total > MAX_ORDER_NUM || total < MIN_ORDER_NUM) {
             throw new OrderLimitViolationException();
         }

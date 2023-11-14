@@ -1,4 +1,4 @@
-package christmas;
+package christmas.model.order;
 
 public class OrderDate {
     private final int MONTH = 12;

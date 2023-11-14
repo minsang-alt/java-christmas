@@ -1,8 +1,8 @@
 package christmas.service;
 
-import christmas.Order;
 import christmas.dto.EventApplyResponse;
-import christmas.event.Event;
+import christmas.model.order.Order;
+import christmas.service.event.Event;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

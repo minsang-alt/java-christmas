@@ -1,8 +1,8 @@
-package christmas;
+package christmas.model.food;
 
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 
@@ -13,12 +13,12 @@ public enum FoodGroup {
     DRINK("음료", Arrays.asList(Food.COKE_ZERO, Food.RED_WINE, Food.CHAMPAGNE)),
     EMPTY("없음", Collections.emptyList());
 
-    private static final Map<Food, FoodGroup> foodGroupMap = new HashMap<>();
+    private static final Map<Food, FoodGroup> foodGroupMap = new EnumMap<>(Food.class);
 
-    private String title;
-    private List<Food> foods;
+    private final String title;
+    private final List<Food> foods;
 
-    // findByFood메서드를 자주 쓸거라 예상되어, 미리 맵에 캐싱
+    // findByFood 메서드를 자주 쓸거라 예상되어, 미리 맵에 캐싱
     static {
         for (FoodGroup foodGroup : FoodGroup.values()) {
             for (Food food : foodGroup.foods) {

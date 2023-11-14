@@ -1,4 +1,4 @@
-package christmas;
+package christmas.controller;
 
 import christmas.dto.EventResultDto;
 import christmas.dto.OrderDto;
@@ -44,7 +44,6 @@ public class ChristmasController {
                 int date = inputView.readDate();
                 String inputMenuWithCount = inputView.inputMenuWithCount();
                 OrderDto orderDto = christmasService.createOrderAndApplyEvent(date, inputMenuWithCount);
-
                 return orderDto;
             } catch (IllegalArgumentException e) {
                 outputView.printExceptionMessage(e.getMessage());

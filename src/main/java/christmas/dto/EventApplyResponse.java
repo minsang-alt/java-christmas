@@ -1,10 +1,10 @@
 package christmas.dto;
 
-import christmas.EventName;
+import christmas.model.event.EventName;
 
 public class EventApplyResponse {
-    private EventName eventName;
-    private int discountPrice;
+    private final EventName eventName;
+    private final int discountPrice;
 
     public EventApplyResponse(EventName eventName, int discountPrice) {
         this.eventName = eventName;

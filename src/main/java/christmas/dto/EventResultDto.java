@@ -1,6 +1,6 @@
 package christmas.dto;
 
-import christmas.EventBadge;
+import christmas.model.event.EventBadge;
 import java.util.List;
 
 public class EventResultDto {

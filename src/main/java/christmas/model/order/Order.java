@@ -1,10 +1,12 @@
-package christmas;
+package christmas.model.order;
+
+import christmas.model.food.FoodGroup;
 
 public class Order {
 
-    private OrderDate orderDate;
+    private final OrderDate orderDate;
 
-    private OrderItems orderItems;
+    private final OrderItems orderItems;
 
     public Order(int date, String orderString) {
         orderDate = new OrderDate(date);

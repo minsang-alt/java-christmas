@@ -1,4 +1,4 @@
-package christmas;
+package christmas.model.food;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -18,8 +18,8 @@ public enum Food {
     CHAMPAGNE("샴페인", 25_000),
     NONE("메뉴아님", 0);
 
-    private String title;
-    private int price;
+    private final String title;
+    private final int price;
 
     Food(String title, int price) {
         this.title = title;

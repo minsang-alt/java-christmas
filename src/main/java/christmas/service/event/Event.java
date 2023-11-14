@@ -1,7 +1,7 @@
-package christmas.event;
+package christmas.service.event;
 
-import christmas.EventName;
-import christmas.Order;
+import christmas.model.event.EventName;
+import christmas.model.order.Order;
 
 public interface Event {
 

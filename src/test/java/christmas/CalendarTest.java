@@ -2,8 +2,8 @@ package christmas;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import christmas.calendar.Calendar;
-import christmas.calendar.Week;
+import christmas.model.calendar.Calendar;
+import christmas.model.calendar.Week;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

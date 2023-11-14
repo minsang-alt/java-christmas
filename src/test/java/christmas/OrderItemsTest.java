@@ -8,6 +8,9 @@ import christmas.exception.InvalidFoodNameException;
 import christmas.exception.InvalidQuantityException;
 import christmas.exception.OnlyDrinkOrderException;
 import christmas.exception.OrderLimitViolationException;
+import christmas.model.food.Food;
+import christmas.model.food.FoodGroup;
+import christmas.model.order.OrderItems;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

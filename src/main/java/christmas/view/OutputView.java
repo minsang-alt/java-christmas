@@ -1,7 +1,7 @@
 package christmas.view;
 
-import christmas.EventBadge;
 import christmas.dto.BenefitDetail;
+import christmas.model.event.EventBadge;
 import java.util.List;
 
 public class OutputView {

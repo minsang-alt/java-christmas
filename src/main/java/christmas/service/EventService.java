@@ -1,13 +1,13 @@
 package christmas.service;
 
-import christmas.EventBadge;
-import christmas.EventName;
-import christmas.Order;
 import christmas.dto.BenefitDetail;
 import christmas.dto.EventApplyResponse;
 import christmas.dto.EventResultDto;
-import christmas.event.Event;
-import christmas.event.GiftEvent;
+import christmas.model.event.EventBadge;
+import christmas.model.event.EventName;
+import christmas.model.order.Order;
+import christmas.service.event.Event;
+import christmas.service.event.GiftEvent;
 import java.util.List;
 import java.util.stream.Collectors;
 
