@@ -24,6 +24,9 @@ public class Calendar {
         }
     }
 
+    private Calendar() {
+    }
+
     public static boolean isWeekday(int date) {
         validateDate(date);
         return WEEKDAYS.contains(CALENDAR.get(date));
